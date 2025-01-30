@@ -19,6 +19,22 @@
     }
   ],
   "paths": {
+    "/channels" : {
+      "get" : {
+        "description": "Retorna todos los canales disponibles para tu cuenta",
+        "parameters": [
+          {
+            "name": "channelType",
+            "in": "query",
+            "description": "Filter by channel type",
+            "schema": {
+              "type": "string",
+              "enum": ["whatsapp", "web-whatsapp", "instagram", "webchat"]
+                }
+          }
+        ]
+      }
+    },
     "/plants": {
       "get": {
         "description": "Returns all plants from the system that the user has access to",
